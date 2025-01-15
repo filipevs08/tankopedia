@@ -12,8 +12,6 @@ body
 }
 #loading-text
 {
-    color: white;
-    
     display: none;
 }
 #tank-content
@@ -42,6 +40,9 @@ body
     padding: 2%;
     border: none;
     border-radius: 10px;
+    background-color: rgb(0, 77, 0);
+    color: white;
+    cursor: pointer;
 }
 #tank-search input[type="text"]
 {
