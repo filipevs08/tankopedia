@@ -1,4 +1,4 @@
-const application_id = "a5b052b5459d70adf3283b62a2459e3e";
+const application_id = "";
 const url = `https://api.wotblitz.eu/wotb/encyclopedia/vehicles/?application_id=${application_id}`;
 const tankImage = document.querySelector("#tank-image");
 const form = document.querySelector("form")
@@ -49,6 +49,7 @@ const cleanData = () => {
     tankImage.src = "";
     tankStats.style.display = "none";
     tankImage.style.display = "none";
+    errorText.innerHTML = "";
 }
 const getApi = async () => {
     loadingText.style.display = "block"
@@ -68,18 +69,11 @@ const loadData = async (tank) => {
     stats.type.innerHTML = `Tipo: ${typeTranslator[tank[0].type]}`;
     
 }
-
-form.addEventListener("submit", async (e) => {
-    e.preventDefault()
-    cleanData()
-    let matchTank = null;
-    let name = tankInput.value;
-    errorText.innerHTML = ""
+const findByName = async (name) => {
     const vehicles = await getApi();
     let data = vehicles.data;
     let tanks = Object.keys(data).map(key => data[key]);
     matchTank = tanks.filter(tank => tank.name === name);
-    console.log(matchTank)
     if (!matchTank[0])
     {
         errorText.innerHTML = "Veiculo não encontrado!"
@@ -87,4 +81,10 @@ form.addEventListener("submit", async (e) => {
     }
 
     loadData(matchTank)
+}
+form.addEventListener("submit", (e) => {
+    e.preventDefault()
+    cleanData()
+    let name = tankInput.value;
+    findByName(name)
 })
