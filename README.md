@@ -1,10 +1,13 @@
-# Tankopédia
-O projeto consome a API da Wargaming, procurando os veiculos do jogo "World of Tanks Blitz" pelo nome, <br>
-para testar localmente é preciso criar uma conta na Wargaming, criar uma aplicação e obter o id dela. <br>
+# Tankopédia 
+O projeto consome API da Wargaming, procurando os veiculos do jogo "World of Tanks Blitz" pelo nome, <br>
+___
+🖥️ Tecnologias usadas:
+ - HTML, CSS, JavaScript e FetchAPI para consumir a API.
 ___
 ## ⏩ Exemplo:
 
-![image-example](https://github.com/user-attachments/assets/8f20d53c-519f-4dfb-b3a9-9781a46bce69)
+![image](https://github.com/user-attachments/assets/28d83b09-e4a6-4371-95ae-e80237c1820b)
+
 
 ⏩ [Link da API](https://developers.wargaming.net/documentation/guide/getting-started/)
 
