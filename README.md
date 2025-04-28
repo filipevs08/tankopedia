@@ -1,5 +1,5 @@
 # Tankopédia 
-O projeto consome API da Wargaming, procurando os veiculos do jogo "World of Tanks Blitz" pelo nome, <br>
+O projeto consome API da Wargaming, procurando os veiculos do jogo "World of Tanks Blitz" pelo nome. <br>
 ___
 🖥️ Tecnologias usadas:
  - HTML, CSS, JavaScript e FetchAPI para consumir a API.
